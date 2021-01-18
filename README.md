@@ -1,4 +1,4 @@
-# Nestjs를 사용하기위한 
+# Nestjs를 다루기위한 과정
 ## 1.  javascript - 유튜브강의를 통한 학습(뉴렉처 자바스크립트 &DoM for VanillaJS 총 54강) - 6일 계획
 
 ~~01강 - 학습가이드~~  
