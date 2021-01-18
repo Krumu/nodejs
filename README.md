@@ -1,4 +1,4 @@
-> 1. javascript - 유튜브강의를 통한 학습(뉴렉처 자바스크립트 &DoM for VanillaJS **총 54강**)
+## 1. javascript - 유튜브강의를 통한 학습(뉴렉처 자바스크립트 &DoM for VanillaJS **총 54강**)
 
 01강 - 학습가이드
 02강 - 자바스크립트의 탄생과 플랫폼
@@ -16,9 +16,9 @@
 
 
 
-> 2. node.js - 생활코딩 nodejs강의를 통한 학습 
+## 2. node.js - 생활코딩 nodejs강의를 통한 학습 
 
 javascript부분 제외하고 선별해서 듣기
 
 
-> 3. exprees.js - 생활코딩 expressjs강의를 통한 학습
+## 3. exprees.js - 생활코딩 expressjs강의를 통한 학습
