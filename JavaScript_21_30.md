@@ -85,3 +85,48 @@ window.onload = init;
  </body>
 ``` 
 위 코드와 같이 코드를 간략하게 나타낼 수 있다. 하지만 script 내에서 전역변수를 사용하는 것은 바람직한 방법이 아니다. 충돌이 날 가능성이 높아지기 때문이다. 그렇다면 어떤 방법으로 위의 코드를 간략하게 만들 수 있을까?
+
+
+
+### 22강 - 스크립트 코드의 지역화
+이벤트를 처리하기 위한 함수는 명명할 필요가 없으며 그 함수가 한 번만 사용된다면 더더욱 함수의 이름이 필요가 없다. 익명함수로 전 시간에 공부한 코드를 수정해보면
+```html
+<script>
+window.onload = function init(){
+    var btnPrint = document.getElementById("btn-print");
+    btnPrint.onclick = function(){
+        var x,y;
+        x= parseInt(prompt("x값을 입력하세요",0)); 
+        y= parseInt(prompt("y값을 입력하세요",0));
+
+        btnPrint.value=x+y;
+    };
+};
+</script>
+</head>
+ <body>
+         <input type="button" value="클릭" onclick="printResult()" id = "btn-print"/>    
+ </body>
+```  
+### 23강 - 코드분리와 이벤트 바인딩 방법 두 가지
+####1) 코드분리
+코드 작성시 html 문서안에 script를 작성할 수 있는데 이는 분업화해서 프로그램을 만드는 경우 문제가 될 수 있음.
+```html
+<script src="파일이름"></script>
+```  
+####2) 이벤트 바인딩 방법
+
+```html
+window.onload = function(){alert("test1");}
+window.onload = function(){alert("test2");}
+```  
+윈도우 객체가 로드되었을때 위의 두 함수를 모두 호출하고 싶어서 위와 같이 코드를 작성하면 원하는 결과를 얻을 수 없다. 앞에서 대입한 내용을 뒤에서 대체하기 때문에 뒤의 함수만 호출이 됨. 이를 해결하려면 이벤트를 처리해주는 함수들이 누적이 되도록 해주면 된다.
+
+```html
+winodw.addEventListener("load",function(){
+    alert("test1");
+});
+winodw.addEventListener("load",function(){
+    alert("test2");
+});
+```  
