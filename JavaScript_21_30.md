@@ -111,12 +111,12 @@ window.onload = function init(){
 ```  
 ### 23강 - 코드분리와 이벤트 바인딩 방법 두 가지
 ---   
-####1) 코드분리
+#### 1) 코드분리
 코드 작성시 html 문서안에 script를 작성할 수 있는데 이는 분업화해서 프로그램을 만드는 경우 문제가 될 수 있음.
 ```html
 <script src="파일이름"></script>
 ```  
-####2) 이벤트 바인딩 방법
+#### 2) 이벤트 바인딩 방법
 
 ```html
 window.onload = function(){alert("test1");}
