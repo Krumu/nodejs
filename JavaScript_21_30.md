@@ -175,4 +175,32 @@ var txtX = section3.querySelector("[css selector]");
 ```
 css selector의 표현방법이 풍부하고 정밀하기때문에 이를 이용하여 검색하거나 select하는것은 정말 편리함.
 
+### 27강 - Node와 Element Node 그리고 childNodes, children
+---   
+```html
+<section id = "section4">
+   <h1>Ex4 : childNodes를 이용한 노드 선택 </h1>
+      <div class = "box">
+          <input />
+          <input />
+      </div>
+</section>
 
+```
+
+```javascript
+window.addEventListener("load",function(){
+    var section4 = document.querySelector("#section4");
+    var box = section4.querySelector(".box");
+
+    var input1 = box.children[0]; //childNodes[0];
+    var input2 = box.children[1]; //childNodes[1];
+
+    input1.value = "hello";
+    input2.value = "okay";
+});
+```
+
+
+텍스트, 주석도 노드임 childNodes[0];으로 코드를 작성하면 공백도 노드로 포함되어 원하는 결과를 얻지 못한다.
+따라서 태그형태만 자식으로 치부하는 children[0]; 코드를 사용해야한다.
