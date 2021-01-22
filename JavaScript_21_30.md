@@ -177,6 +177,7 @@ css selector의 표현방법이 풍부하고 정밀하기때문에 이를 이용
 
 ### 27강 - Node와 Element Node 그리고 childNodes, children
 ---   
+계보를 이용해서 노드를 선택할 수도 있다.  
 ```html
 <section id = "section4">
    <h1>Ex4 : childNodes를 이용한 노드 선택 </h1>
