@@ -164,5 +164,15 @@ var lis = sec1.getElementsTagName("li");
 li[0].textContent = "Hello"; // li[0].innerText="Hello";
 ```  
 로 작성하면 모든 엘리먼트에 id를 부여할 수고를 덜 수 있다. 그런데 이런 경우에도 문제가 발생할 수 있다.
-새로운 li 태그를 넣거나 태그의 순서를 변경하면 javascript에서의 인덱스도 변경해주어야 하며, 코드 작성이후에 인덱스가 의미하는 태그가 무엇이였는지를 확인해야하는 상황이 발생한다. 또한 그룹마다 동일한 의미의 li 들이 있어도 id는 두 개이상이 될 수 없으니 효율적으로 사용 할 수 없다. 이 때 class를 사용하면 된다.(단, getElementsByClass를 하면 배열을 가지고 오므로 요소가 1개일 경우도 [0]와 같이 인덱스를 붙여서 사용할 것)
+새로운 li 태그를 넣거나 태그의 순서를 변경하면 javascript에서의 인덱스도 변경해주어야 하며, 코드 작성이후에 인덱스가 의미하는 태그가 무엇이였는지를 확인해야하는 상황이 발생한다. 또한 그룹마다 동일한 의미의 li 들이 있어도 id는 두 개이상이 될 수 없으니 효율적으로 사용 할 수 없다. 이 때 class를 사용하면 된다.(단, getElementsByClass를 하면 배열을 가지고 오므로 요소가 1개일 경우도 [0]와 같이 인덱스를 붙여서 사용할 것)  
+
+
+### 26강 - Selectors API    
+---  
+selctors API를 사용하면 편리하게 노드선택을 할 수 있다.(querySelector(), querySelectorAll())
+```javascript
+var txtX = section3.querySelector("[css selector]");
+```
+css selector의 표현방법이 풍부하고 정밀하기때문에 이를 이용하여 검색하거나 select하는것은 정말 편리함.
+
 
