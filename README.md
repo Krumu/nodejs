@@ -24,6 +24,24 @@
 20강 - 문서의 엘리먼트 객체 이용하기~~  
 21강 - 코드 초기화와 엘리먼트 객체 선택하기  
 22강 - 스크립트 코드의 지역화  
+23강 - 코드분리와 이벤트 바인딩 방법 두 가지
+24강 - 첫 예제 간단한 계산기 프로그램 만들기
+25강 - 노드 선택 방법 개선하기  
+26강 - Selectors API  
+27강 - Node와 Element Node 그리고 childNodes, children  
+28강 - Node의 종류와 개체 형식  
+29강 - Node 인터페이스  
+30강 - 엘리먼트 노드의 속성변경 예제 - 사진변경  
+31강 - CSS 스타일 속성변경 
+32강 - 텍스트 노드를 동적으로 추가/삭제  
+33강 - 엘리먼트 노드 추가(appendChild, append, innerHTML)/삭제(removeChild, remove) 그리고 주의할 점들  
+34강 - 노드 복제 및 템플릿(template)복제  
+35강 - 노드 삽입(insertBefore, insertAdjacentElement), 노드 순회(firstChild, previousSibli)  
+36강 - 다중 엘리먼트 선택방법과 일괄 삭제  
+37강 - 두 엘리먼트의 자리 바꾸기  
+38강 - 제목으로 내용 정렬하기  
+39강 - 이벤트와 이벤트 객체  
+40강 - 이벤트 객체의 target 속성 이용하기  
 ...  
 54강 - DND API #1 : draggable 설정  
 
