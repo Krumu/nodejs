@@ -1,5 +1,5 @@
 ### 21강 - 코드 초기화와 엘리먼트 객체 선택하기  
-
+---  
 20강에서 btnPrint가 정의되기 이전에 script block에서 이를 사용하여(btnPrint.onclick = printResult;) 에러가 발생한 상황을 접했다.
 이를 해결하기 위한 방법으로 가장 쉬운 방법은 script block을 btnPrint가 선언된 이후로 옮기는 방법이 있지만 
 코드가 굉장이 납잡해진다는 단점을 가진다. 그렇다면 다른 방법으로는 무엇이 있을까?
@@ -89,6 +89,7 @@ window.onload = init;
 
 
 ### 22강 - 스크립트 코드의 지역화
+---  
 이벤트를 처리하기 위한 함수는 명명할 필요가 없으며 그 함수가 한 번만 사용된다면 더더욱 함수의 이름이 필요가 없다. 익명함수로 전 시간에 공부한 코드를 수정해보면
 ```html
 <script>
@@ -109,6 +110,7 @@ window.onload = function init(){
  </body>
 ```  
 ### 23강 - 코드분리와 이벤트 바인딩 방법 두 가지
+---   
 ####1) 코드분리
 코드 작성시 html 문서안에 script를 작성할 수 있는데 이는 분업화해서 프로그램을 만드는 경우 문제가 될 수 있음.
 ```html
@@ -130,3 +132,37 @@ winodw.addEventListener("load",function(){
     alert("test2");
 });
 ```  
+
+### 24강 - 첫 예제 간단한 계산기 프로그램 만들기  
+### 25강 - 노드 선택 방법 개선하기  
+---  
+```html  
+<section>
+   <h1></h1>
+   <ul>
+      <li id="num1">번호1</li>
+      <li id="num2">번호2</li>
+      <li id="num3">번호3</li>
+   </ul>
+<section>
+```  
+엘리먼트를 사용할때 마다 각 태그에 id속성을 만들어야하나? 그러기엔 너무 번거롭다.
+
+```html  
+<section id = "sec1">
+   <h1></h1>
+   <ul>
+      <li>번호1</li>
+      <li>번호2</li>
+      <li>번호3</li>
+   </ul>
+<section>
+```  
+위와 같이 작성한 후에
+```javascript
+var lis = sec1.getElementsTagName("li");
+li[0].textContent = "Hello"; // li[0].innerText="Hello";
+```  
+로 작성하면 모든 엘리먼트에 id를 부여할 수고를 덜 수 있다. 그런데 이런 경우에도 문제가 발생할 수 있다.
+새로운 li 태그를 넣거나 태그의 순서를 변경하면 javascript에서의 인덱스도 변경해주어야 하며, 코드 작성이후에 인덱스가 의미하는 태그가 무엇이였는지를 확인해야하는 상황이 발생한다. 또한 그룹마다 동일한 의미의 li 들이 있어도 id는 두 개이상이 될 수 없으니 효율적으로 사용 할 수 없다. 이 때 class를 사용하면 된다.(단, getElementsByClass를 하면 배열을 가지고 오므로 요소가 1개일 경우도 [0]와 같이 인덱스를 붙여서 사용할 것)
+
