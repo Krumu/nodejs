@@ -252,8 +252,8 @@ script영역에 작성하면 페이지가 읽혀질 때 실행이되지만 onXX 
    function printResult()
    {
         var x,y;
-        x= prompt("x값을 입력하세요",0);
-        y= prompt("y값을 입력하세요",0);
+        x= parseInt(prompt("x값을 입력하세요",0));
+        y= parseInt(prompt("y값을 입력하세요",0));
         alert(x+y);
    } 
 </script>
@@ -262,9 +262,68 @@ script영역에 작성하면 페이지가 읽혀질 때 실행이되지만 onXX 
    <input type="button" value="클릭" onclick="printResult()" />;
 </body>
 ```  
-페이지를 로드하는 경우에 script block에서 함수를 호출하지않으니 함수가 실행되지않을 것이며, 이벤트 발생시에 함수가 호출되어 실행될 것이다.
+페이지를 로드하는 경우에 script block에서 함수를 호출하지않으니 함수가 실행되지않을 것이며, 이벤트 발생시에 함수가 호출되어 실행될 것이다.  
 
+### 20강 - 문서의 엘리먼트 객체 이용하기
+---  
+html 태그들이 화면에 보여질때 바로 보여지는게 아니라 메모리상에 javascript가 이용할 수 있게끔 객체로 올려놓는다.
+태그라는 개념이 메모리에 올라가게되면 엘리멘트 객체라한다. 이 엘리먼트 객체를 이용하는 시간을 가져보자.
 
+```html
+<script>
+   function printResult()
+   {
+        var x,y;
+        x= parseInt(prompt("x값을 입력하세요",0));
+        y= parseInt(prompt("y값을 입력하세요",0));
+        btnPrint.value=x+y;
+   } 
+</script>
 
+<body>
+   <input type="button" value="클릭" onclick="printResult()" id='btnPrint'/>
+</body>
+```  
+id를 이용해서 그 객체를 이용할 수 있는데 위 코드를 실행하면 id가 btnPrint인 엘리먼트 객체의 value속성이 x+y의 값으로 바뀌게 된다.
+태그를 감싸고 있는 안쪽 텍스트를 제어하고 싶으면 innerText를 사용한다.
 
+여기서 하나의 생각이 떠오른다. onclick또한 속성인데 이를 id를 이용해서 제어할 수는 없을까? 이것이 가능하다면 html 태그쪽에서는 script를 되도록 사용하지 않을 수 있으니
+코드의 유지보수에 도움이 될 것이다.
 
+```html
+<script>
+   function printResult()
+   {
+        var x,y;
+        x= parseInt(prompt("x값을 입력하세요",0));
+        y= parseInt(prompt("y값을 입력하세요",0));
+        btnPrint.value=x+y;
+   } 
+   btnPrint.onclick= printResult;
+</script>
+
+<body>
+   <input type="button" value="클릭" id='btnPrint'/>
+</body>
+```  
+그런데 주목해야할 부분이 있다. printResult 뒤에 소괄호가 없다. script 내에서 함수를 대입할때는 함수가 참조하고 있는 함수객체를 대입해야하는데 괄호를 쓰면 함수를 호출하게 되는 것이다. 
+그래서 그 결과를 대입하게 된다. 하지만 여기서는 함수의 결과값을 대입하는 것이 아니기 때문에 ()를 사용하면 안된다.
+
+위의 코드를 실행해보면....? 에러가 난다. btnPrint is not defined라는 문구가 뜨는데 이는 script block은 페이지가 로드되면 바로 실행된다는 점을 생각해보면 그 이유를 알 수 있다.
+```html
+<script>
+   function printResult()
+   {
+        var x,y;
+        x= parseInt(prompt("x값을 입력하세요",0));
+        y= parseInt(prompt("y값을 입력하세요",0));
+        btnPrint.value=x+y;
+   } 
+   btnPrint.onclick= printResult;
+</script>
+```  
+script block내에 printResult() 내부 코드는 실행되지않지만 btnPrint.onclick= printResult; 코드는 실행이 된다.
+btnPrint는 <input type ="button" value ="출력" id = "btnPrint"/>가 실행될때 정의되는데 이 코드가 실행되기 전에
+btnPrint를 사용하게되고 이는 메모리상에 존재하지 않으니 에러가 발생하는 것이다.
+
+이를 해결하는 방법은 없을까?
