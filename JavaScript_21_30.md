@@ -228,3 +228,8 @@ window.addEventListener("load",function(){
 * **Notation** <font color = **"#ffff00"** size = **"10px"**> 속성의 값으로 설정하는 것 중에서 어떤 표현형식을 사용할수 있게 해주는 표기법에 대한 내용을 담고 있음
 
 위의 타입들은 공통분모를 가지고있음. 그 공통분모를 기능적으로 하나로 추상화하여 node라 함.
+
+
+### 29강 - Node 인터페이스  
+---  
+node를 조작할 수 있는 기능이 node 인터페이스안에 있음
