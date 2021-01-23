@@ -211,7 +211,9 @@ window.addEventListener("load",function(){
 
 객체들이 존재하려면 그 객체의 형식이라는 개체가 존재 해야한다. 객체 형식에는 어떠한 것들이 있는지 알아보자. 
 
-* **Document**  ```html 문서 객체의 중심을 담당하고 있는 부분```  
+* **Document**  
+```html 
+문서 객체의 중심을 담당하고 있는 부분```  
 * **DocumentType** ```그 녀석을 객체화할때 객체 형식```
 * **Elemment**  ``` <textarea><p> ```  
 * **Attr** ```<textarea <b>rows</b> = "30" **cols**="40">```
