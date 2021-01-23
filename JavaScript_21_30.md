@@ -218,14 +218,13 @@ window.addEventListener("load",function(){
 
 * **Document** 문서 객체의 중심을 담당하고 있는 부분  
 * **DocumentType** 그 녀석을 객체화할때 객체 형식  
-* **Elemment** <textarea>  
+* **Elemment** <textarea>\<p>\</p>
 * **Attr** <textarea **rows** = "30" **cols**="40">
 * **Entity** &**lt**;뉴렉처**&**gt**;** &**nbsp**;
 * **EntityReference** **&**lt**;**뉴렉처**&**gt**;** **&**nbsp**;**
-* **Text** <h3>**뉴렉처**</h3>
+* **Text** \<p>**뉴렉처**\</p>
 * **comment** <!-- 주석 -->
 * **CDTASection** Entity를 쓰다보면 그 기호를 쓰는 것에 대한 불편함도 있음. <![CDATA[<,>,]]> 특수기호 마음껏 써도 됨
 * **Notation** <font color = **"#ffff00"** size = **"10px"**> 속성의 값으로 설정하는 것 중에서 어떤 표현형식을 사용할수 있게 해주는 표기법에 대한 내용을 담고 있음
 
-위의 타입들은 공통분모를 가지고있음. 그 공통분모를 기능적으로 하나로 추상화하여 node라 함.
 위의 타입들은 공통분모를 가지고있음. 그 공통분모를 기능적으로 하나로 추상화하여 node라 함.
