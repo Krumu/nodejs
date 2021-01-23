@@ -213,7 +213,7 @@ window.addEventListener("load",function(){
 
 * **Document** 문서 객체의 중심을 담당하고 있는 부분  
 * **DocumentType** 그 녀석을 객체화할때 객체 형식  
-* **Elemment** <textarea><p>  
+* **Elemment**  ```html <textarea><p> ```  
 * **Attr** <textarea **rows** = "30" **cols**="40">
 * **Entity** &**lt**;뉴렉처**&**gt**;** &**nbsp**;
 * **EntityReference** **&**lt**;**뉴렉처**&**gt**;** **&**nbsp**;**
