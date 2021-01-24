@@ -198,4 +198,183 @@ window.addEventListener("load",function(){
 하지만 위 코드에는 문제점이 있다. 노드를 추가하고 삭제를 하면 바로 menuListDiv의 첫번째 텍스트노드가 삭제되지 않는다. 이는 '공백'때문이다.
 하지만 이 문제를 해결할 필요는 없다. 보통 노드를 추가할때 텍스트 노드만을 만들어서 추가하기보다는 텍스트노드를 만들고 태그들을 같이 포함시켜 넣어주기 때문이다.
 
+### 33강 - 엘리먼트 노드 추가(appendChild, append, innerHTML)/삭제(removeChild, remove) 그리고 주의할 점들 
 
+택스트 노드에 태그들을 같이 포함시켜 추가하는 코드를 만들어보자
+
+```html  
+<section id = "section6">
+    <h1>Ex6 : 노드 조작: 메뉴추가(createTextNode, Element) </h1>
+    <div>
+        <input class="title-input" name = "title" />
+        <input type="button" class = "add-button" value="추가" />
+        <input type="button" class = "del-button" value="삭제"/>
+    </div>
+    <ul class = "menu-list">
+        <li><a href ="">aaa</a></li>
+        <li><a href ="">bbb</a></li>            
+    </ul>
+</section>
+```  
+
+```javascript
+
+window.addEventListener("load",function(){
+    var section = document.querySelector("#section6");
+    
+    var titleInput = section.querySelector(".title-input");
+    var menuListUl = section.querySelector(".menu-list");
+    var addButton = section.querySelector(".add-button");
+    var delButton = section.querySelector(".del-button");
+
+    addButton.onclick= function() {
+        
+        var title = titleInput.value;
+        var txtNode = document.createTextNode(title);
+    
+        var aNode = document.createElement("a");
+        aNode.href="";
+        aNode.appendChild(txtNode);
+
+        var liNode = document.createElement("li");
+        liNode.appendChild(aNode);
+
+        menuListUl.appendChild(liNode);
+        
+    };
+
+    delButton.onclick= function() {
+        //var txtNode = menuListDiv.childNodes[0];
+        var liNode = menuListUl.children[0];
+        menuListUl.removeChild(liNode); 
+        //항상 부모를 얻어야만 했어
+        liNode.remove();
+        
+    };
+});
+
+```  
+하지만 코드를 이렇게 작성한다면 엘리먼트의 구조가 복잡할때 코드가 너무 길어질 것이다. 따라서 다음과 같이 작성하기도 한다.  
+```html  
+<section id = "section6">
+    <h1>Ex6 : 노드 조작: 메뉴추가(createTextNode, Element) </h1>
+    <div>
+        <input class="title-input" name = "title" />
+        <input type="button" class = "add-button" value="추가" />
+        <input type="button" class = "del-button" value="삭제"/>
+    </div>
+    <ul class = "menu-list">
+        <li><a href ="">aaa</a></li>
+        <li><a href ="">bbb</a></li>            
+    </ul>
+</section>
+```  
+
+```javascript
+window.addEventListener("load",function(){
+    var section = document.querySelector("#section6");
+    
+    var titleInput = section.querySelector(".title-input");
+    var menuListUl = section.querySelector(".menu-list");
+    var addButton = section.querySelector(".add-button");
+    var delButton = section.querySelector(".del-button");
+
+    addButton.onclick= function() {
+
+        var title = titleInput.value;
+        menuListUl.innerHTML += '<li><a href="">' +title+ '</a></li>';
+
+    };
+
+    delButton.onclick= function() {
+        var liNode = menuListUl.children[0];
+        menuListUl.removeChild(liNode);         
+    };
+});
+```
+위의 코드는 innerHTML을 이용해서 html 코드 자체를 삽입하는 방식을 사용했다. 이때 += 연산자가아닌 =를 사용하면 menuListUl에 있던 다른 객체들이 다 날라가게 된다. 하지만 이 코드에도 문제점이 있는데 menuListUl에 엘리먼트 노드 객체가 들어있는데 이것들이 문자열로 변환된 후 추가된 문자열과 더해져서 다시 대입된 후 객체로 만들어진다. 즉, 성능에 문제가 생길 수 있다는 것이다. 이는 다음과 같은 코드작성을 통해 어느정도 해결 할 수 있다.
+
+```javascript
+window.addEventListener("load",function(){
+    var section = document.querySelector("#section6");
+
+    var titleInput = section.querySelector(".title-input");
+    var menuListUl = section.querySelector(".menu-list");
+    var addButton = section.querySelector(".add-button");
+    var delButton = section.querySelector(".del-button");
+
+    addButton.onclick= function() {
+
+        var title = titleInput.value;
+
+        var html = '<a><hrep="">'+ text + '</a>';
+        var li = createElement("li");
+
+        li.innerHTML = html
+        menuListUl.appendChild(li);
+
+    };
+
+    delButton.onclick= function() {
+        var liNode = menuListUl.children[0];
+        menuListUl.removeChild(liNode);
+    };
+});
+```
+
+앞선 강의에서 텍스트 노드를 추가할때 그 과정이 너무 복잡하다는 것을 알 수 있었는데 새로운 함수(append)가 추가되면서 이런 문제점이 개선되었다.(추가적으로 remove를 통해서 삭제도 간편하게 할 수 있다.)
+
+```javascript
+//Ex6 : 엘리먼트 노드의 속성 & CSS 속성 변경
+window.addEventListener("load",function(){
+    var section = document.querySelector("#section6");
+
+    var titleInput = section.querySelector(".title-input");
+-- (끼워넣기) 비주얼 --                                                                                                                                                         63        127,4         82%
+택스트 노드에 태그들을 같이 포함시켜 추가하는 코드를 만들어보자
+
+```html
+<section id = "section6">
+    <h1>Ex6 : 노드 조작: 메뉴추가(createTextNode, Element) </h1>
+    <div>
+        <input class="title-input" name = "title" />
+        <input type="button" class = "add-button" value="추가" />
+        <input type="button" class = "del-button" value="삭제"/>
+    </div>
+    <ul class = "menu-list">
+        <li><a href ="">aaa</a></li>
+        <li><a href ="">bbb</a></li>
+    </ul>
+</section>
+```
+
+```javascript
+
+window.addEventListener("load",function(){
+    var section = document.querySelector("#section6");
+
+    var titleInput = section.querySelector(".title-input");
+    var menuListUl = section.querySelector(".menu-list");
+    var addButton = section.querySelector(".add-button");
+    var delButton = section.querySelector(".del-button");
+
+    addButton.onclick= function() {
+
+        var title = titleInput.value;
+        var txtNode = document.createTextNode(title);
+
+        var aNode = document.createElement("a");
+        aNode.href="";
+        aNode.appendChild(txtNode);
+
+        var liNode = document.createElement("li");
+        liNode.appendChild(aNode);
+
+        menuListUl.appendChild(liNode);
+
+    };
+
+    delButton.onclick= function() {
+        var liNode = menuListUl.children[0];
+        menuListUl.removeChild(liNode);
+```  
