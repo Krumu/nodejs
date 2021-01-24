@@ -199,7 +199,7 @@ window.addEventListener("load",function(){
 하지만 이 문제를 해결할 필요는 없다. 보통 노드를 추가할때 텍스트 노드만을 만들어서 추가하기보다는 텍스트노드를 만들고 태그들을 같이 포함시켜 넣어주기 때문이다.
 
 ### 33강 - 엘리먼트 노드 추가(appendChild, append, innerHTML)/삭제(removeChild, remove) 그리고 주의할 점들 
-
+---   
 택스트 노드에 태그들을 같이 포함시켜 추가하는 코드를 만들어보자
 
 ```html  
