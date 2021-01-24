@@ -32,7 +32,7 @@
 28강 - Node의 종류와 개체 형식  
 29강 - Node 인터페이스~~  
 30강 - 엘리먼트 노드의 속성변경 예제 - 사진변경  
-31강 - CSS 스타일 속성변경 
+31강 - CSS 스타일 속성변경  
 32강 - 텍스트 노드를 동적으로 추가/삭제  
 33강 - 엘리먼트 노드 추가(appendChild, append, innerHTML)/삭제(removeChild, remove) 그리고 주의할 점들  
 34강 - 노드 복제 및 템플릿(template)복제  
