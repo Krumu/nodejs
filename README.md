@@ -2,8 +2,8 @@
 ## 1.  javascript - 유튜브강의를 통한 학습
 (sourse: https://www.youtube.com/watch?v=gxzy_CFqV1M&list=PLq8wAnVUcTFWhQrIXNN6kPYXJA6X2IQM4)
 
-~~01강 - 학습가이드 
-02강 - 자바스크립트의 탄생과 플랫폼  
+~~01강 - 학습가이드   
+02강 - 자바스크립트의 탄생과 플랫폼    
 03강 - 실습환경 준비하기  
 04강 - 코드 작성과 Live Server 설치하기  
 05강 - 데이터 객체와 래퍼클래스
