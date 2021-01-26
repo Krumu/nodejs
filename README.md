@@ -58,7 +58,7 @@
 07강 - JavaScript - 변수  
 08강 - JavaScript - Template Literal  
 09강 - Node.js - URL로 입력된 값 사용하기  
-10강 - App - 동적인 웹페이지 만들기~~  
+10강 - App - 동적인 웹페이지 만들기  
 11강 - Node.js - 파일 읽기  
 12강 - App - 파일을 이용해 본문 구현  
 13강 - JavaScript - Boolean  
@@ -66,7 +66,7 @@
 15강 - JavaScript - 제어문  
 16강 - JavaScript - 조건문  
 17강 - Node.js - 콘솔에서의 입력값    
-18강 - App - Not found 오류 구현  
+18강 - App - Not found 오류 구현~~  
 19강 - App - 홈페이지 구현  
 20강 - JavaScript - 반복문  
 21강 - JavaScript - 배열  
