@@ -36,9 +36,9 @@
 32강 - 텍스트 노드를 동적으로 추가/삭제  
 33강 - 엘리먼트 노드 추가(appendChild, append, innerHTML)/삭제(removeChild, remove) 그리고 주의할 점들  
 34강 - 노드 복제 및 템플릿(template)복제  
-35강 - 노드 삽입(insertBefore, insertAdjacentElement), 노드 순회(firstChild, previousSibli)~~    
+35강 - 노드 삽입(insertBefore, insertAdjacentElement), 노드 순회(firstChild, previousSibli)    
 36강 - 다중 엘리먼트 선택방법과 일괄 삭제  
-37강 - 두 엘리먼트의 자리 바꾸기  
+37강 - 두 엘리먼트의 자리 바꾸기~~    
 38강 - 제목으로 내용 정렬하기  
 39강 - 이벤트와 이벤트 객체  
 40강 - 이벤트 객체의 target 속성 이용하기  
@@ -49,7 +49,59 @@
 
 ## 2.  node.js - 생활코딩 nodejs강의를 통한 학습 
 
-javascript부분 제외하고 선별해서 듣기
+01강 - 수업의 목적  
+02강 - Node.js - 설치  
+03강 - Node.js 공부방법  
+04강 - Node.js - 웹서버 만들기  
+05강 - JavaScript - Data type - Number  
+06강 - JavaScript - Data type - String  
+07강 - JavaScript - 변수  
+08강 - JavaScript - Template Literal  
+09강 - Node.js - URL로 입력된 값 사용하기  
+10강 - App - 동적인 웹페이지 만들기  
+11강 - Node.js - 파일 읽기  
+12강 - App - 파일을 이용해 본문 구현  
+13강 - JavaScript - Boolean  
+14강 - JavaScript - 비교 연산자  
+15강 - JavaScript - 제어문  
+16강 - JavaScript - 조건문  
+17강 - Node.js - 콘솔에서의 입력값    
+18강 - App - Not found 오류 구현  
+19강 - App - 홈페이지 구현  
+20강 - JavaScript - 반복문  
+21강 - JavaScript - 배열  
+22강 - JavaScript - 배열과 반복문  
+23강 - Node.js - 파일 목록 알아내기  
+24강 - App - 글목록 출력하기  
+25강 - JavaScript - 함수의 기본 문법  
+26강 - JavaScript - 함수의 입력    
+27강 - JavaScript - 함수의 출력  
+28강 - App - 함수를 이용해서 정리 정돈하기  
+29강 - 수업의 정상  
+30강 - Node.js - 동기와 비동기 그리고 콜백  
+31강 - Node.js - 패키지 매니저와 PM2  
+32강 - HTML - Form  
+33강 - App - 글생성 UI 만들기  
+34강 - App - POST 방식으로 전송된 데이터 받기  
+35강 - App - 파일생성과 리다이렉션  
+36강 - App - 글수정 - 수정 링크 생성  
+37강 - App - 글수정 - 수정할 정보 전송  
+38강 - App - 글수정 - 수정된 내용 저장  
+39강 - App - 글삭제 - 삭제버튼 구현  
+40강 - App - 글삭제 기능 완성  
+41강 - JavaScript - 객체의 형식  
+42강 - JavaScript - 객체의 반복  
+43강 - JavaScript - 객체 - 값으로서 함수  
+44강 - JavaScript - 객체 - 데이터와 값을 담는 그릇으로서 객체  
+45강 - App -객체를 이용해서 템플릿 기능 정리 정돈하기  
+46강 - Node.js - 모듈의 형식  
+47강 - App 제작 - 모듈의 활용  
+48강 - App - 입력 정보에 대한 보안  
+49강 - App - 출력정보에 대한 보안  
+50강 - API  
+51강 - 수업을 마치며  
+52강 - 보충수업 - PM2 사용법  
+
 
 
 ## 3.  exprees.js - 생활코딩 expressjs강의를 통한 학습
