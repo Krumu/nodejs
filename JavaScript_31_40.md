@@ -378,3 +378,28 @@ window.addEventListener("load",function(){
         var liNode = menuListUl.children[0];
         menuListUl.removeChild(liNode);
 ```  
+
+### 34 - 노드 복제 및 템플릿(template) 복제  
+---  
+var trNode = noticeList.querySelector("tbody tr");
+var cloneNode = trNode.cloneNode(true);
+
+데이터가 없을경우: template
+
+var cloneNode = document.importClone(template.content, true);
+
+
+### 35 - 노드 삽입(insertBefore, insertAdjacentElement), 노드 순회(firstChild, previousSibli)
+모든 것을 대상으로하는 노드 순회: parentNode, firstChild, lastChild, previousSibling, nextSibling
+엘리먼트만 대상으로하는 노드 순회: nextElementSibling, previousElementSibling
+
+노드 삽입 insertBefore
+노드 삽입 insertAdjacentElement(position, element);  // beforebegin, afterbegin, beforeend, afterend
+
+
+### 36 -  다중 엘리먼트 선택방법과 일괄 삭제 
+### 37 - 두 엘리먼트의 자리 바꾸기
+replaceChild, replaceWith
+
+
+
