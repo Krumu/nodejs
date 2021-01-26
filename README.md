@@ -49,7 +49,7 @@
 
 ## 2.  node.js - 생활코딩 nodejs강의를 통한 학습 
 
-01강 - 수업의 목적  
+~~01강 - 수업의 목적  
 02강 - Node.js - 설치  
 03강 - Node.js 공부방법  
 04강 - Node.js - 웹서버 만들기  
@@ -58,7 +58,7 @@
 07강 - JavaScript - 변수  
 08강 - JavaScript - Template Literal  
 09강 - Node.js - URL로 입력된 값 사용하기  
-10강 - App - 동적인 웹페이지 만들기  
+10강 - App - 동적인 웹페이지 만들기~~  
 11강 - Node.js - 파일 읽기  
 12강 - App - 파일을 이용해 본문 구현  
 13강 - JavaScript - Boolean  
