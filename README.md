@@ -66,7 +66,7 @@
 15강 - JavaScript - 제어문  
 16강 - JavaScript - 조건문  
 17강 - Node.js - 콘솔에서의 입력값    
-18강 - App - Not found 오류 구현~~  
+18강 - App - Not found 오류 구현  
 19강 - App - 홈페이지 구현  
 20강 - JavaScript - 반복문  
 21강 - JavaScript - 배열  
@@ -75,7 +75,7 @@
 24강 - App - 글목록 출력하기  
 25강 - JavaScript - 함수의 기본 문법  
 26강 - JavaScript - 함수의 입력    
-27강 - JavaScript - 함수의 출력  
+27강 - JavaScript - 함수의 출력~~  
 28강 - App - 함수를 이용해서 정리 정돈하기  
 29강 - 수업의 정상  
 30강 - Node.js - 동기와 비동기 그리고 콜백  
