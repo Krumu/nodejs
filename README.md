@@ -75,11 +75,11 @@
 24강 - App - 글목록 출력하기  
 25강 - JavaScript - 함수의 기본 문법  
 26강 - JavaScript - 함수의 입력    
-27강 - JavaScript - 함수의 출력~~  
+27강 - JavaScript - 함수의 출력   
 28강 - App - 함수를 이용해서 정리 정돈하기  
 29강 - 수업의 정상  
 30강 - Node.js - 동기와 비동기 그리고 콜백  
-31강 - Node.js - 패키지 매니저와 PM2  
+31강 - Node.js - 패키지 매니저와 PM2~~  
 32강 - HTML - Form  
 33강 - App - 글생성 UI 만들기  
 34강 - App - POST 방식으로 전송된 데이터 받기  
